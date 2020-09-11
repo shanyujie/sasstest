@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+//头部样式
+/*
+    头部样式
+*/
+.title{
+    width: 100%;
+    height: 100px;
+    background: gray;
+}
+
+//声明变量
+$fontSize : 20px !default;
+$width : 100%;
+$lineHeight : 1.5;
+
+//声明数组
+$fSize : 16px 20px 24px 26px;
+
+//声明map
+$colors : (aaa : red,bbb : green,ccc : blue);
+//声明函数
+@function color($key){
+    @return map-get($colors,$key);
+}
+//声明混合器
+@mixin size($width : 100px,$height : 100px){
+    width: $width;
+    height: $height;
+}
+
+@mixin position($posistion:absolute,$left:0,$top:0){
+    position: $posistion;
+    left: $left;
+    top: $top;
+}
